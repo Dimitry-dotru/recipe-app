@@ -28,8 +28,8 @@ export default function SelectedMealsPage() {
 
   return (
     <div className="max-w-6xl mx-auto p-4">
-      <div className="flex justify-between items-center mb-8">
-        <div className="flex gap-4 items-center">
+      <div className="flex justify-between md:items-center mb-8 flex-col md:flex-row w-full gap-4">
+        <div className="flex gap-4 md:items-center flex-col-reverse md:flex-row">
           <Button onClick={() => router.back()} variant="outline">
             ← Back
           </Button>
@@ -62,8 +62,8 @@ export default function SelectedMealsPage() {
             <ul className="divide-y">
               {meals.map((meal) => (
                 <li key={meal.idMeal} className="py-4 first:pt-0 last:pb-0">
-                  <div className="flex items-center gap-4">
-                    <div className="relative w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
+                  <div className="flex items-center gap-4 flex-col md:flex-row">
+                    <div className="relative w-40 h-40 md:w-30 md:h-30 rounded-md overflow-hidden flex-shrink-0">
                       <Image
                         src={meal.strMealThumb}
                         alt={meal.strMeal}
