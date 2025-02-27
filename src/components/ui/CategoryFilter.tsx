@@ -27,7 +27,7 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({
             : "bg-gray-200 hover:bg-gray-300"
           }`}
       >
-        Все
+        All
       </button>
       {categories.map((category) => (
         <button
